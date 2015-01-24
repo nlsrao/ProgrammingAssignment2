@@ -7,7 +7,8 @@
 
 makeCacheMatrix <- function(x = matrix()) {
 	matinv <- NULL
-        ## set function to set the input matrix and inverse matrix as null
+        ## set function to set the input matrix globally with given matrix
+	## and inverse matrix as null
         set <- function(y) {
                 x <<- y
                 matinv <<- NULL
@@ -16,7 +17,7 @@ makeCacheMatrix <- function(x = matrix()) {
         get <- function(){
               x  
         } 
-        ## setinv function to set the inverse matrix in matinv
+        ## setinv function to set the inverse matrix into cache (matinv)
         setinv <- function(inv){
                 matinv <<- inv
         }
